@@ -16,7 +16,7 @@
 .expert-section__pages {}
 
 .expert-page__section {
-  width: 343px;
+  width: 376px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -131,7 +131,7 @@
 }
 
 .nav-button {
-  width: 211px;
+  width: max-content;
   cursor: pointer;
   padding: 12px 41px 14px;
   margin-top: 16px;
@@ -144,6 +144,7 @@
   font-size: 20px;
   font-weight: 500;
   border-radius: 50px;
+  transition: all 0.3s ease;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
@@ -151,5 +152,6 @@
 }
 
 .nav-button:hover {
-  background: #e0e0e0;
+  color: #fff !important;
+  box-shadow: 0 2px 8px #c7c7c7;
 }
