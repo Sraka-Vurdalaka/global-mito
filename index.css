@@ -3,6 +3,7 @@
 @import './css/title.css';
 @import './css/register.css';
 @import './css/modal.css';
+@import './css/expertProfileForm.css';
 
 /* Fira Sans Font Family */
 @font-face {
@@ -198,6 +199,7 @@ body {
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
@@ -438,17 +440,20 @@ strong {
   align-items: center;
   font-size: 24px;
 }
+
 .social-icon {
   width: 34px;
   height: 34px;
   object-fit: cover;
 }
+
 .project-team__container {
   margin-top: 16px;
   display: flex;
   flex-direction: column;
   gap: 56px;
 }
+
 .project-team__item {
   display: flex;
   gap: 57px;
@@ -547,6 +552,7 @@ strong {
   .contacts-title-container {
     gap: 12px;
   }
+
   .social-icon {
     width: 34px;
     height: 34px;

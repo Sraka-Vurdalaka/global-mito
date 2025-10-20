@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <title>Global Mito</title>
+  <meta name="description" content="Global Mito - is the international community where science, practice, and business come together
+  to collaborate and co-create mitochondrial health industry navigation.">
+  <link rel="stylesheet" href="./index.css" />
+  <!-- Google tag (gtag.js) Начало-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-09DH6B1E4S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Настройка согласия по умолчанию (запрещено до явного согласия)
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_personalization: 'denied',
+      ad_user_data: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-09DH6B1E4S');
+  </script>
+
+  <!-- Open Graph разметка -->
+  <meta property="og:title" content="Global Mito">
+  <meta property="og:description" content="Global Mito - is the international community where science, practice, and business come together
+  to collaborate and co-create mitochondrial health industry navigation. Every member
+  of the community has exciting opportunities to present themselves at the
+  international level, exchange practical solutions, and become part of the Expert
+  map.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://globalmito2026.pro/">
+  <meta property="og:image" content="https://globalmito2026.pro/images/desk_knowledge_base_2x.webp">
+</head>
+
+<body>
+  <!-- Хедер загружается динамически -->
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="center-block">
+      <div class="expert-form__container">
+        <div class="expert-flexbox__wrapper">
+          <h1 class="expert-title">
+            Expert Profile Form: Mitochondrial Health Value Chain
+          </h1>
+          <form class="expert-section__pages" id="registrationForm"
+            action="https://formsubmit.co/b5ffb709277ca4916c8eb97b686baf73" method="POST">
+            <div class="expert-page__section" data-page='1'>
+              <h2>Personal Information</h2>
+              <div class="form-expert__group-wrapper">
+                <input type="text" id="firstName" name="firstName" class="form-expert-input" placeholder="First Name*"
+                  required />
+                <input type="text" id="lastName" name="lastName" class="form-expert-input" placeholder="Last Name*"
+                  required />
+                <input type="text" id="company" name="company" class="form-expert-input"
+                  placeholder="The company you represent*" required />
+
+                <h3 class="radio-title">Scale of Operations:</h3>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="scale" value="local" class="radio-input">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">Local</span>
+                  </label>
+
+                  <label class="radio-label">
+                    <input type="radio" name="scale" value="national" class="radio-input">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">National</span>
+                  </label>
+
+                  <label class="radio-label">
+                    <input type="radio" name="scale" value="international" class="radio-input">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">International</span>
+                  </label>
+
+                  <label class="radio-label">
+                    <input type="radio" name="scale" value="global" class="radio-input">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">Global</span>
+                  </label>
+                </div>
+              </div>
+              <div class="nav-button" data-target="2"> кнопка 1</div>
+            </div>
+
+
+
+            <div class="expert-page__section" data-page='2'>
+              <h2>Страница 2</h2>
+              <div class="nav-button" data-target="3"> кнопка 2</div>
+            </div>
+            <div class="expert-page__section" data-page='3'>
+              <h2>Страница 3</h2>
+              <div class="nav-button" data-target="1"> кнопка 3</div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <style>
+      .expert-page__section[data-page='2'],
+      .expert-page__section[data-page='3'] {
+        display: none;
+      }
+
+      .expert-page__section[data-page='1'] {
+        display: flex;
+      }
+
+      .nav-button {
+        cursor: pointer;
+        padding: 10px;
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        display: inline-block;
+      }
+
+      .nav-button:hover {
+        background: #e0e0e0;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.nav-button');
+
+        buttons.forEach(button => {
+          button.addEventListener('click', function () {
+            const targetPage = this.getAttribute('data-target');
+            console.log(this)
+            console.log(targetPage)
+
+            // Скрываем все страницы
+            document.querySelectorAll('.expert-page__section').forEach(section => {
+              section.style.display = 'none';
+            });
+
+            // Показываем целевую страницу
+            const targetSection = document.querySelector(`.expert-page__section[data-page="${targetPage}"]`);
+            if (targetSection) {
+              targetSection.style.display = 'flex';
+            }
+          });
+        });
+      });
+    </script>
+  </main>
+
+  <!-- Футер загружается динамически -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Модальные окна загружаются динамически -->
+  <div id="modals-placeholder"></div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
