@@ -1,0 +1,132 @@
+.footer-section {
+  background-color: #d16537;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left {
+  display: flex;
+  gap: 104px;
+  flex: 1;
+}
+
+.footer-right {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: block;
+  width: 233px;
+  height: 21px;
+}
+
+.footer-logo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer-links,
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-link,
+.social-link {
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100%;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.footer-copyright-mobile {
+  display: none;
+}
+.footer-copyright-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-address-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+}
+.footer-policy-text {
+  display: flex;
+  gap: 16px;
+}
+.footer-policy-text a {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 1180px) {
+  .footer-container {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 970px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 47px;
+  }
+
+  .footer-left {
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  .footer-right .social-links {
+    flex-direction: row;
+  }
+
+  .footer-column:first-child {
+    margin: 0px 0px 27px 0px;
+  }
+
+  .footer-column:last-child {
+    margin: 0px;
+  }
+
+  .footer-copyright-desktop {
+    display: none;
+  }
+
+  .footer-copyright-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-policy-text {
+    flex-direction: column;
+  }
+}

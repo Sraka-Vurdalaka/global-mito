@@ -1,0 +1,270 @@
+<!-- Модальное окно формы регистрации на событие-->
+<div class="modal-section" id="modalSection">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-container">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">
+      <span class="close-icon"></span>
+      <span class="close-icon"></span>
+    </button>
+    <div class="modal-header">
+      <h2 class="modal-title">Join us</h2>
+    </div>
+    <div class="modal-body">
+      <form
+        class="registration-form"
+        id="registrationForm"
+        action="https://formsubmit.co/b5ffb709277ca4916c8eb97b686baf73"
+        method="POST">
+        <input type="hidden" name="subject" value="Новая регистрация на Global Mito" />
+        <input type="hidden" name="redirect" value="false" />
+        <div class="form-group">
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            class="form-input"
+            placeholder="First Name*"
+            required />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            class="form-input"
+            placeholder="Last Name*"
+            required />
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="country" name="country" class="form-input" placeholder="Country" />
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="regalia" name="regalia" class="form-input" placeholder="Regalia" />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            id="company"
+            name="company"
+            class="form-input"
+            placeholder="The company you represent" />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            id="community"
+            name="community"
+            class="form-input"
+            placeholder="The community you belong to" />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-input"
+            placeholder="Email Address*" />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="form-input"
+            placeholder="Phone Number (include country code)*" />
+        </div>
+
+        <div class="form-group form-checkbox">
+          <input
+            type="checkbox"
+            id="agreement"
+            name="agreement"
+            class="form-checkbox-input"
+            required />
+          <label for="agreement" class="form-checkbox-label">
+            I agree to the terms and conditions *
+          </label>
+        </div>
+
+        <button type="submit" class="form-submit-button">Join</button>
+      </form>
+      <div
+        id="formMessage"
+        style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окноCookie -->
+<div class="cookie-modal" id="cookieModal">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      <h3 class="cookie-title">Our website uses cookies</h3>
+      <div class="cookie-description">
+        Our website use cookies. By continuing, we assume your permission to deploy cookies as
+        detailed in our
+        <a href="./cookies.html">Cookies Policy</a>.
+      </div>
+    </div>
+    <div class="cookie-buttons">
+      <div class="cookie-settings" id="cookieSettings">Cookie Settings</div>
+      <div class="cookie-decline" id="cookieDecline">Decline</div>
+      <div class="cookie-accept" id="cookieAccept">Accept</div>
+    </div>
+  </div>
+</div>
+<div class="cookie-optional__section">
+  <div class="cookie-optional__overlay"></div>
+  <div class="cookie-optional__container">
+    <button class="cookie-optional__close" id="cookieOptionalClose" aria-label="Close modal">
+      <span class="close-icon"></span>
+      <span class="close-icon"></span>
+    </button>
+    <div class="cookie-optional__header">
+      <h3 class="cookie-optional__title">Privacy preference center</h3>
+    </div>
+    <div class="cookie-optional__content">
+      <div class="cookie-items__sidebar">
+        <div class="cookie-items__sidebar-item" sidebar-item="yourPrivacy">Your Privacy</div>
+        <div class="cookie-items__sidebar-item" sidebar-item="strictlyNecessary">
+          Strictly necessary cookie
+        </div>
+        <div class="cookie-items__sidebar-item" sidebar-item="analysis">Analysis cookies</div>
+        <div class="cookie-items__sidebar-item" sidebar-item="functionality">
+          Functionality or customisation cookies
+        </div>
+        <div class="cookie-items__sidebar-item" sidebar-item="crossContextual">
+          Cross-Contextual Behavioral Advertising Cookies
+        </div>
+        <div class="cookie-items__sidebar-item" sidebar-item="targeting">Targeting Cookies</div>
+      </div>
+      <div class="cookie-items__content">
+        <div class="cookie-items__content-item" content-item="yourPrivacy">
+          <h4 class="cookie-items__content-item-title">Your Privacy</h4>
+          <div class="cookie-items__content-item-description">
+            Cookies and other similar technologies are an indispensable part of how our Platform
+            works. The main goal of cookies is to make your browsing experience easier and more
+            efficient and to improve our services and the Platform itself. Likewise, we use cookies
+            to show you targeted advertising when you visit third-party websites and apps. Here you
+            will find all the information on the cookies we use. You will also be able to activate
+            and/or deactivate them according to your preferences, except for any cookies that are
+            strictly necessary for the functioning of the Platform. Keep in mind that blocking
+            certain cookies may affect your experience on the Platform, as well as how it works. For
+            more information, please see our
+            <a class="cookie-items__content-item-link" href="./cookies.html">Cookies Policy</a>
+          </div>
+        </div>
+        <div class="cookie-items__content-item" content-item="strictlyNecessary">
+          <h4 class="cookie-items__content-item-title">Strictly necessary cookies</h4>
+          <div class="cookie-items__content-item-subtitle">Always Active</div>
+          <div class="cookie-items__content-item-description">
+            These cookies are necessary for the correct functioning of the Platform, and they cannot
+            be deactivated on our systems. Generally speaking, they are configured to respond to
+            actions made by you when requesting services, such as adjusting your privacy
+            preferences, logging in to your account or filling out forms. You can configure your
+            browser to block these cookies or alert you when they are present; however, some parts
+            of the platform will not work without them.
+            <a class="cookie-items__content-item-link" href="./cookies.html">Cookies Policy</a>
+          </div>
+        </div>
+        <div class="cookie-items__content-item" content-item="analysis">
+          <h4 class="cookie-items__content-item-title">Analysis cookies</h4>
+          <div class="cookie-items__content-item-description">
+            These cookies allow us to analyze the number of visits and sources of traffic in order
+            to measure and improve the performance of our Platform. They help us to know which pages
+            are the most and least popular, and how many people visit the website. If you do not
+            allow these cookies, we will not know when you visited our Platform. To turn these
+            cookies on or off toggle the button below. "Active" means these cookies can be used.
+            "Inactive" means these cookies cannot be used.
+            <a class="cookie-items__content-item-link" href="./cookies.html">Cookies Policy</a>
+          </div>
+          <div class="switcher__box">
+            <div class="switch switch-analysis">
+              <div class="handle-switch"></div>
+            </div>
+            <div class="switcher__text">
+              <div class="switcher__text-item active-text">Active</div>
+              <div class="switcher__text-item disactive-text active">Inactive</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cookie-items__content-item" content-item="functionality">
+          <h4 class="cookie-items__content-item-title">Functionality or customisation cookies</h4>
+          <div class="cookie-items__content-item-description">
+            These cookies enhance the functionality and personalisation of the Platform. They can be
+            put in place by us or by third parties whose services we have incorporated into our
+            pages. If you do not allow these cookies, some of our services will not function
+            properly. To turn these cookies on or off toggle the button below. "Active" means these
+            cookies can be used. "Inactive" means these cookies cannot be used.
+            <a class="cookie-items__content-item-link" href="./cookies.html">Cookies Policy</a>
+          </div>
+          <div class="switcher__box">
+            <div class="switch">
+              <div class="handle-switch"></div>
+            </div>
+            <div class="switcher__text">
+              <div class="switcher__text-item active-text">Active</div>
+              <div class="switcher__text-item disactive-text active">Inactive</div>
+            </div>
+          </div>
+        </div>
+        <div class="cookie-items__content-item" content-item="crossContextual">
+          <h4 class="cookie-items__content-item-title">
+            Cross-Contextual Behavioral Advertising Cookies
+          </h4>
+          <div class="cookie-items__content-item-description">
+            These cookies are put in place by our advertising partners and can be present throughout
+            the entire platform. Said third parties may use them to create a profile of your
+            interests and show you relevant advertising on other websites. If you do not allow these
+            cookies, you may receive less targeted advertising. To turn these cookies on or off
+            toggle the button below. "Active" means these cookies can be used. "Inactive" means
+            these cookies cannot be used.
+            <a class="cookie-items__content-item-link" href="./cookies.html">Cookies Policy</a>
+          </div>
+          <div class="switcher__box">
+            <div class="switch switch-crossContextual">
+              <div class="handle-switch"></div>
+            </div>
+            <div class="switcher__text">
+              <div class="switcher__text-item active-text">Active</div>
+              <div class="switcher__text-item disactive-text active">Inactive</div>
+            </div>
+          </div>
+        </div>
+        <div class="cookie-items__content-item" content-item="targeting">
+          <h4 class="cookie-items__content-item-title">Targeting Cookies</h4>
+          <div class="cookie-items__content-item-description">
+            These cookies may be set through our site by our advertising partners. They may be used
+            by those companies to build a profile of your interests and show you relevant adverts on
+            other sites. They do not store directly personal information, but are based on uniquely
+            identifying your browser and internet device. If you do not allow these cookies, you
+            will experience less targeted advertising.
+            <a class="cookie-items__content-item-link" href="./cookies.html">Cookies Policy</a>
+          </div>
+          <div class="switcher__box">
+            <div class="switch switch-targeting">
+              <div class="handle-switch"></div>
+            </div>
+            <div class="switcher__text">
+              <div class="switcher__text-item active-text">Active</div>
+              <div class="switcher__text-item disactive-text active">Inactive</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cookie-items__footer">
+      <div class="cookie-items__footer-button">Confirm my choices</div>
+      <div class="cookie-items__footer-button">Reject optional cookies</div>
+      <div class="cookie-items__footer-button">Allow all cookies</div>
+    </div>
+  </div>
+</div>

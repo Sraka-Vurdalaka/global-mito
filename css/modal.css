@@ -1,0 +1,619 @@
+/* Модальное окно */
+.modal-section,
+.cookie-optional__section {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
+
+.modal-section.active,
+.cookie-optional__section.active {
+  display: block;
+}
+
+/* Оверлей */
+.modal-overlay,
+.cookie-optional__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+}
+
+.modal-section.active .modal-overlay,
+.cookie-optional__section.active .cookie-optional__overlay {
+  opacity: 1;
+}
+
+/* Контейнер модального окна */
+.modal-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 90%;
+  max-width: 541px;
+  max-height: 90vh;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+  -moz-transform: translate(-50%, -50%) scale(0.9);
+  -ms-transform: translate(-50%, -50%) scale(0.9);
+  -o-transform: translate(-50%, -50%) scale(0.9);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.modal-section.active .modal-container {
+  padding: 71px 91px;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 32px 0px;
+}
+
+.modal-title {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #161817;
+  margin: 0;
+}
+
+.modal-close {
+  cursor: pointer;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 37px;
+  right: 37px;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.close-icon {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #161817;
+  border-radius: 2px;
+  top: 50%;
+  left: 0;
+  transition: background-color 0.3s ease;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.close-icon:nth-child(1) {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.close-icon:nth-child(2) {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.modal-close:hover .close-icon {
+  background-color: #d16537;
+}
+
+/* Тело модального окна */
+.modal-body {
+  overflow-y: auto;
+}
+
+/* Форма регистрации */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0px 0px 35px 0px;
+}
+
+.form-group {
+  width: 100%;
+  height: 44px;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  padding: 12px 25px;
+  background-color: #f5f5f5;
+  color: #161817;
+  outline: none;
+  border: none;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #d16537;
+  box-shadow: 0 0 0 3px rgba(209, 101, 55, 0.1);
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-checkbox-input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #d16537;
+}
+
+.form-checkbox-label {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  color: #161817;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Кнопка отправки */
+.form-submit-button {
+  width: 211px;
+  margin: 0 auto;
+  background-color: #d16537;
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.form-submit-button:hover {
+  background-color: #b85630;
+}
+
+.form-submit-button:active {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+@media (max-width: 780px) {
+  .modal-container {
+    width: 100%;
+  }
+
+  .modal-section.active .modal-container {
+    padding: 0px 16px;
+  }
+
+  .modal-header {
+    margin: 80px 0px 45px 0px;
+  }
+
+  .modal-title {
+    font-size: 22px;
+  }
+
+  .modal-body {
+    padding: 0px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .form-submit-button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+/* Модальное окно с опциями для Cookies */
+
+.cookie-optional__container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 90%;
+  max-width: 580px;
+  max-height: 90vh;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+  -moz-transform: translate(-50%, -50%) scale(0.9);
+  -ms-transform: translate(-50%, -50%) scale(0.9);
+  -o-transform: translate(-50%, -50%) scale(0.9);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.cookie-optional__section.active .cookie-optional__container {
+  padding: 40px 20px 40px 20px;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
+}
+
+.cookie-optional__close {
+  cursor: pointer;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+}
+
+.cookie-optional__close:hover {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.cookie-optional__close:hover .close-icon {
+  background-color: #d16537;
+}
+
+.cookie-optional__header {
+  margin-bottom: 24px;
+}
+
+.cookie-optional__title {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #161817;
+  margin: 0;
+  text-align: center;
+}
+
+.cookie-optional__content {
+  display: flex;
+  gap: 0px;
+}
+
+.cookie-items__sidebar {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.cookie-items__sidebar-item {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  color: #666;
+  padding: 15px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #ffffff;
+}
+
+.cookie-items__sidebar-item:hover {
+  color: #d16537;
+}
+
+.cookie-items__sidebar-item.active {
+  background-color: #ffffff;
+  color: #d16537;
+  font-weight: 600;
+  border-left: 3px solid #d16537;
+}
+
+.cookie-items__content {
+  padding: 0px 0px 0px 20px;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.cookie-items__content-item {
+  margin-bottom: 24px;
+  display: none;
+  opacity: 0;
+  animation: fadeOut 0.2s ease;
+}
+
+.cookie-items__content-item.active {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.cookie-items__content-item-title {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #161817;
+  margin: 0 0 8px 0;
+}
+
+.cookie-items__content-item-subtitle {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.cookie-items__content-item-description {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.cookie-items__content-item-link {
+  color: #d16537;
+  text-decoration: underline;
+}
+
+.cookie-items__content-item-link:hover {
+  color: #b85630;
+}
+
+.switcher__box {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+.switch {
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  position: relative;
+  background: #ffc7b1;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.switch.active {
+  background: #b85630;
+}
+
+.handle-switch {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 17px;
+  height: 17px;
+  background: #ffffff;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.handle-switch.active {
+  left: 28px;
+}
+
+.switcher__text-item {
+  display: none;
+  font-style: italic;
+}
+
+.active-text {
+  color: #161817;
+}
+
+.disactive-text {
+  color: #999;
+}
+.switcher__text-item.active {
+  display: block;
+  font-size: 14px;
+}
+
+.cookie-items__footer {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cookie-items__footer-button {
+  width: 100%;
+  border: 2px solid #d16537;
+  color: #666;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.cookie-items__footer-button:hover {
+  background-color: #d16537;
+  color: #fff;
+}
+
+@media (max-width: 810px) {
+  .cookie-items__sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .cookie-optional__content {
+    flex-direction: column;
+  }
+
+  .cookie-items__sidebar {
+    min-width: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .cookie-items__content {
+    max-height: 50vh;
+  }
+
+  .cookie-optional__section.active .cookie-optional__container {
+    padding: 20px;
+  }
+
+  .cookie-optional__title {
+    font-size: 20px;
+  }
+
+  .cookie-items__footer {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .cookie-buttons {
+    flex-direction: column;
+  }
+}

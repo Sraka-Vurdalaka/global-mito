@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <title>Global Mito</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-09DH6B1E4S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      // Настройка согласия по умолчанию (запрещено до явного согласия)
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_personalization: 'denied',
+        ad_user_data: 'denied',
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-09DH6B1E4S');
+    </script>
+  </head>
+  <body>
+    <!-- Хедер загружается динамически -->
+    <div id="header-placeholder"></div>
+    <main>
+      <div class="center-block">
+        <div class="common-wrapper__container">
+          <div class="title__common-container">
+            <h1 class="title">What We do</h1>
+          </div>
+          <!-- <div class="what-we-do_banner-container">
+            <img src="./images/test.jpg" alt="Banner" loading="lazy" />
+          </div> -->
+          <div class="description-container">
+            <div class="description">
+              <p>
+                We use
+                <strong>
+                  science-based knowledge management (KM) techniques and technologies,
+                </strong>
+                enabling the effective collection, systematization, development, and application of
+                knowledge. This includes cutting-edge digital tools like GenAI. Experts from KMGN
+                bring best practices into the mito field
+              </p>
+              <p>
+                We integrate the principles of the <strong>co-creative culture</strong> from the
+                GLINK summits (Global Leaders who Innovate Next Knowledge) and MXR.world (‘mixers
+                across the world’). Every session, roundtable, and networking activity is aimed at
+                joint knowledge generation with tangible outcomes.
+              </p>
+              <p>
+                he result of our work will not be just a collection of abstracts, but a complete
+                database architecture - <strong>International Mito Knowledge Base:</strong> Mito
+                Body of Knowledge and Mito Business ecosystem map.
+              </p>
+            </div>
+          </div>
+          <a href="#" class="register-button">Register interest</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Футер загружается динамически -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Модальные окна загружаются динамически -->
+    <div id="modals-placeholder"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

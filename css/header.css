@@ -1,0 +1,400 @@
+.header-section {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.header-container {
+  width: 1366px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  gap: 48px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  width: 175px;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.navigation {
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 15px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #000;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d16537;
+}
+
+.nav-arrow {
+  width: 6px;
+  height: 3px;
+  margin-left: 4px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-arrow {
+  transform: rotate(180deg);
+}
+
+/* Выпадающее меню десктоп Начало*/
+.nav-item {
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  top: 100%;
+  left: 0;
+  width: 168px;
+  list-style: none;
+  background-color: #161817;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 12px 16px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-link {
+  display: block;
+
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.dropdown-link:hover {
+  color: #d16537;
+}
+
+.mobile-navigation {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+}
+
+/* Выпадающее меню десктоп Конец*/
+
+/* Мобильное меню Начало*/
+@media (max-width: 1310px) {
+  .desctop-navigation {
+    display: none;
+  }
+
+  .mobile-navigation-container .social-links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mobile-navigation {
+    display: block;
+  }
+
+  .header-container {
+    padding: 0 20px;
+    flex-direction: row-reverse;
+  }
+
+  /* Бургер-меню */
+  .burger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    padding: 0;
+    z-index: 1001;
+  }
+
+  .burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #161817;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+
+  .mobile-navigation.active .burger-line {
+    background-color: #d16537;
+  }
+
+  /* Мобильное меню */
+  .mobile-navigation {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  .navigation {
+    background-color: #ffffff00;
+  }
+  .active {
+    display: block;
+  }
+
+  .mobile-navigation-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+
+  .mobile-navigation.active .mobile-navigation-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-navigation-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 40px;
+    right: -100%;
+    width: 360px;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: right 0.4s ease;
+    padding: 16px 16px 56px 16px;
+    -webkit-transition: right 0.4s ease;
+    -moz-transition: right 0.4s ease;
+    -ms-transition: right 0.4s ease;
+    -o-transition: right 0.4s ease;
+  }
+
+  .mobile-navigation.active .mobile-navigation-container {
+    right: 0;
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+
+  .mobile-logo {
+    display: flex;
+    align-items: center;
+    height: 16px;
+    width: 175px;
+  }
+
+  .mobile-logo img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #161817;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    margin: 8px 0px 8px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+  }
+
+  .mobile-nav-arrow:hover {
+    color: #d16537;
+  }
+
+  /* Выпадающее меню в мобильной версии */
+  .mobile-dropdown {
+    position: relative;
+  }
+
+  .mobile-dropdown-toggle {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobile-nav-arrow {
+    width: 8px;
+    height: 4px;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+  }
+
+  .mobile-dropdown.active .mobile-nav-arrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+
+  .mobile-dropdown-menu {
+    padding: 0px 0px 0px 24px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    -webkit-transition: max-height 0.4s ease;
+    -moz-transition: max-height 0.4s ease;
+    -ms-transition: max-height 0.4s ease;
+    -o-transition: max-height 0.4s ease;
+  }
+
+  .mobile-dropdown.active .mobile-dropdown-menu {
+    max-height: 400px;
+  }
+
+  .mobile-dropdown-link {
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #161817;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+
+  .mobile-dropdown-link:hover {
+    color: #d16537;
+  }
+
+  .mobile-social-links .social-link {
+    color: #161817;
+  }
+}
+/* Мобильное меню Конец*/
+
+@media (max-width: 780px) {
+  .header-container {
+    height: 55px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 18px;
+    width: 202px;
+  }
+
+  .header-section {
+    margin-bottom: 17px;
+  }
+}
