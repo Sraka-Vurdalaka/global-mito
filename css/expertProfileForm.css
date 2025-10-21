@@ -25,7 +25,7 @@
 .form-expert__group-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .form-expert-input {
@@ -71,11 +71,58 @@
   gap: 12px;
 }
 
-.radio-description {
+.radio-description,
+.textarea-description {
   color: #BDB5B2;
   font-size: 14px;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 500;
+}
+
+.nav-button-submit {
+  margin-bottom: 16px;
+  border: none;
+}
+
+.form-expert__textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #F5F5F5;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  resize: vertical;
+}
+
+/* Стили для placeholder */
+.form-expert__textarea::placeholder {
+  color: #BDB5B2;
+  font-size: 16px;
+  opacity: 1;
+  /* Для Firefox */
+}
+
+/* Для разных браузеров */
+.form-expert__textarea::-webkit-input-placeholder {
+  color: #BDB5B2;
+  font-size: 16px;
+}
+
+.form-expert__textarea::-moz-placeholder {
+  color: #BDB5B2;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.form-expert__textarea:-ms-input-placeholder {
+  color: #BDB5B2;
+  font-size: 16px;
+}
+
+.form-expert__textarea:-moz-placeholder {
+  color: #BDB5B2;
+  font-size: 16px;
+  opacity: 1;
 }
 
 .radio-input {
