@@ -64,7 +64,8 @@
                   required />
                 <input type="text" id="company" name="company" class="form-expert-input"
                   placeholder="The company you represent*" required />
-
+              </div>
+              <div class="form-expert__group-wrapper">
                 <h3 class="radio-title">Scale of Operations:</h3>
                 <div class="radio-group">
                   <label class="radio-label">
@@ -98,7 +99,6 @@
             </div>
 
             <div class="expert-page__section" data-page='2'>
-
               <h2>Your Primary Role in the Mitochondrial Health Value Chain</h2>
               <div class="radio-description">If you hold more than one role, please indicate the most significant one
                 for you</div>
@@ -247,7 +247,6 @@
               <div class="nav-button" data-target="3"> Continue (2/3)</div>
             </div>
 
-
             <div class="expert-page__section" data-page='3'>
               <h2>Expertise and Value</h2>
               <div class="form-expert__group-wrapper">
@@ -298,7 +297,7 @@
                 <input type="text" id="c" name="c" class="form-expert-input" placeholder="c&#41;" required />
               </div>
 
-              <button class="nav-button nav-button-submit" data-target="1"> Submit </button>
+              <button class="nav-button nav-button-submit"> Submit </button>
               <div class="textarea-description">The submitted information will be structured and published on the Global
                 MITO project website.
                 It will be deleted upon your request.</div>
@@ -316,8 +315,6 @@
         buttons.forEach(button => {
           button.addEventListener('click', function () {
             const targetPage = this.getAttribute('data-target');
-            console.log(this)
-            console.log(targetPage)
 
             // Скрываем все страницы
             document.querySelectorAll('.expert-page__section').forEach(section => {

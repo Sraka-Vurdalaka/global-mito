@@ -202,3 +202,24 @@
   color: #fff !important;
   box-shadow: 0 2px 8px #c7c7c7;
 }
+
+@media (max-width: 780px) {
+  .expert-flexbox__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .expert-title {
+    width: 100%;
+    font-size: 24px;
+    max-width: none;
+  }
+
+  .expert-page__section {
+    width: 343px;
+  }
+
+  .radio-text {
+    font-size: 14px;
+  }
+}
